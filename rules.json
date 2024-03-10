@@ -1,0 +1,86 @@
+{
+    "Rule1": {
+        "Conditions": {
+            "From": {
+                "Contains": "random@gmail.com"
+            },
+            "Subject": {
+                "Contains": "Random"
+            },
+            "To": {
+                "Contains":  "bhatnagarkshitij20@gmail.com"
+            },
+            "Date": {
+                "Less than": "2022-01-01"
+            },
+            "ACTION":{
+                "read": true,
+                "move_lable": [true, "SENT"]
+            }
+        },
+        "Predicate": "All"
+    },
+    "Rule2": {
+        "Conditions": {
+            "From": {
+                "Contains": "random@gmail.com"
+            },
+            "Subject": {
+                "Contains": "Random"
+            },
+            "To": {
+                "Contains":  "bhatnagarkshitij20@gmail.com"
+            },
+            "Date": {
+                "Less than": "2022-01-01"
+            },
+            "ACTION":{
+                "read": false,
+                "move_lable": [false, "NONE"]
+            }
+        },
+        "Predicate": "Any"
+    },
+    "Rule3": {
+        "Conditions": {
+            "From": {
+                "NotEquals": "random@gmail.com"
+            },
+            "Subject": {
+                "NotEquals": "Random"
+            },
+            "To": {
+                "NotEquals":  "bhatnagarkshitij20@gmail.com"
+            },
+            "Date": {
+                "Less than": "2023-01-01"
+            },
+            "ACTION":{
+                "read": true,
+                "move_lable": [true, "Starred"]
+            }
+        },
+        "Predicate": "All"
+    },
+    "Rule4": {
+        "Conditions": {
+            "From": {
+                "NotEquals": "random@gmail.com"
+            },
+            "Subject": {
+                "NotEquals": "Random"
+            },
+            "To": {
+                "NotEquals":  "bhatnagarkshitij20@gmail.com"
+            },
+            "Date": {
+                "Less than": "2023-01-01"
+            },
+            "ACTION":{
+                "read": false,
+                "move_lable": [false, "NONE"]
+            }
+        },
+        "Predicate": "Any"
+    }
+}
